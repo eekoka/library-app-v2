@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  display: grid;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 60px 1px 60px auto;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  width: max(800px, 80vw);
+  text-align: center;
+  justify-content: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#header-left {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / 2;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+#header-middle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  grid-column: 2 / 3;
+}
+
+
+#header-middle button {
+  background: none;
+  border: none;
+  padding: 4px 16px;
+  font-size: 16px;
+  width: 80px;
+  height: 32px;
+}
+
+#header-right {
+  display: flex;
+  align-items: center;
+  grid-column: 3 / 4;
+}
+
+#header-left img {
+  width: 30px;
+}
+
+#header-right img {
+  width: 30px;
+}
+
+#search-box {
+  height: 22px;
+  border-radius: 25px;
+  padding: 4px 12px;
+}
+
+.long-divider {
+  height: 1px;
+  background-color: #dadbe4;
+}
+
+#library {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+#library div :not(.bclose) {
+  flex-grow: 1;
+}
+
+.bclosebtn {
+  background: none;
+  border: none;
+  color: grey;
+  font-weight: bold;
+  flex: 0 0 20px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.bclosebtn:hover {
+  background-color: grey;
+  color: white;
+}
+
+.bstatusbtn {
+  background: none;
+  border: none;
+  color: grey;
+  flex: 0 0 20px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.bstatusbtn:hover {
+  background-color: grey;
+  color: white;
+}
+
+.bcard {
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  background-color: #F0FFFF;
+  align-items: center;
+  padding: 10px 3px;
+  gap: 6px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#newBookBtn {
+  height: 40px;
+  border-radius: 10px;
+  padding: 4px 12px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#newBookDialog {
+  position: absolute;
+  margin: 70px 30%;
+  width: 300px;
+  height: 400px;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+#ruSureDialog {
+  position: absolute;
+  margin: 70px 30%;
+  width: 300px;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+#ruSureDialog button {
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 6px;
+}
+
+dialog input {
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+dialog select {
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+
+#diagTitle {
+  font-size: 20px;
+}
+
+#dialogBtns button {
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 6px;
+}

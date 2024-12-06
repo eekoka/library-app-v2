@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="header-left">
+                <img src="./icons/bookshelf.svg" alt="logo">
+                <div id="logo-text">Library App</div>
+            </div>
+            <div id="header-middle">
+                <button>Explore</button>
+                <button>Learn</button>
+                <button>Share</button>
+            </div>
+            <div id="header-right">
+                <img class="header-icon" src="./icons/search.svg" alt="search-icon">
+                <form>
+                    <input type="text" id="search-box" name="search-box">
+                </form>
+            </div>
+        </div>
+        <div class="long-divider"></div>
+        <div class="action">
+            <button id="newBookBtn">Add a New Book</button>
+
+            <!-- pop-up dialog box containing a form to add new book -->
+            <dialog id="newBookDialog">
+                <form method="dialog">
+                    <div id="dialogform">
+                        <p id="diagTitle">Add a New Book</p><br>
+
+                        <label for="bookTitle">Title:</label><br>
+                        <input type="text" id="bookTitle" name="bookTitle" required>  <br><br>
+
+                        <label for="author">Author:</label><br>
+                        <input type="text" id="author" name="author" required>  <br><br>
+
+                        <label for="nPages">No. of Pages:</label><br>
+                        <input type="number" min="1" id="nPages" name="nPages" required>  <br><br>
+
+                        <label for="readStatus">Read Status:</label><br>
+                        <select id="readStatus" name="readStatus" required> <br>
+                        <option></option>
+                        <option>Not read</option>
+                        <option>Read</option>
+                        </select>
+                    </div>
+                    <div id="dialogBtns">
+                        <br><br>
+                        <button id="cancelBtn" type="reset">Cancel</button>
+                        <button id="confirmBtn" type="submit">Confirm</button>
+                    </div>
+                </form>
+            </dialog>
+            
+            <!-- pop-up dialog box to ask confirmation before deleting book-->
+            <dialog id="ruSureDialog">
+                <form>
+                    <div id="ruSureMsg">Are You Sure?</div><br><br>
+                    <button id="ruSureBtnYes" type="reset">Yes, Sure</button>
+                    <button id="ruSureBtnNo" type="button">No, Cancel</button>
+                </form>
+            </dialog>
+
+        </div> 
+        <div id="library">
+
+        </div>
+    </div>
+</body>
+</html>
